@@ -232,7 +232,7 @@ static int ResolveAddress(SDLNet_Address *addr)
             hints.ai_flags  = AI_V4MAPPED;
         }
     } else {
-        phints = NULL;
+        hints.ai_family = AF_INET;
     }
 
     //SDL_Log("getaddrinfo '%s'", addr->hostname);
